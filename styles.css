@@ -1,0 +1,365 @@
+/* Общие стили */
+
+body {
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #939393; /* Коричневый фон для остальных секций */
+    color: #fff; /* Белый текст для контраста */
+}
+
+/* Для стилевого класса, если он используется */
+.text-content {
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Пример для конкретных элементов, если нужно */
+h1, h2, h3, h4, h5, h6,
+p, a, span, div {
+    font-family: 'Oswald', sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+#hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('salto.gif') center/cover no-repeat fixed;
+    color: #fff;
+}
+.hero-content {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px; /* Максимальная ширина контента */
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 5em; /* Увеличиваем размер "Flippy Studio" до 5em */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subtext {
+    font-size: 2.5em; /* Увеличиваем размер "We Create Emotions" до 2.5em */
+    margin-top: 10px;
+    font-weight: bold; /* Добавляем жирный стиль */
+}
+
+.motivation-text {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+#our-team {
+    padding: 150px 0; /* Увеличиваем внутренние отступы для контента */
+    height: auto; /* Автоматическая высота секции Our Team */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('background.jpg'); /* Путь к фоновому изображению */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; /* Фиксируем фоновое изображение */
+    position: relative; /* Относительное позиционирование для плавающего фона */
+    color: #fff;
+}
+
+#our-team h2 {
+    margin-bottom: 20px; /* Уменьшаем отступ снизу */
+    font-size: 3em; /* Увеличиваем размер шрифта заголовка */
+}
+
+.separator {
+    width: 50px;
+    height: 2px;
+    background-color: #fff;
+    margin: 30px auto; /* Увеличенные отступы от верха и низа */
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row; /* Располагаем элементы слева направо */
+    height: 100%; /* Заполняем всю высоту секции */
+    padding: 20px 0; /* Увеличиваем внутренние отступы */
+}
+
+.team-member {
+    text-align: center;
+    width: calc(20% - 20px); /* Ширина элемента участника команды (20% с отступом между) */
+    margin: 0 10px;
+    opacity: 0;
+    transform: translateY(-50px); /* Начальное положение по оси Y */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.team-member.animate-from-left.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.team-member img {
+    width: 50%;
+    border-radius: 50%;
+}
+
+.team-member h3 {
+    font-size: 2em;
+    margin-bottom: 0px;
+}
+
+.team-member p {
+    font-size: 1.5em !important;
+}
+
+/* Анимация для элементов команды */
+.team-member.animate-from-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#our-games {
+    padding: 350px 0; /* Увеличиваем внутренние отступы для контента */
+    height: auto; /* Автоматическая высота секции Our Games */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('background2.jpg'); /* Путь к вашему фоновому изображению */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; /* Фиксируем фоновое изображение */
+    position: relative; /* Позиционирование относительно для плавающего фона */
+}
+
+.games-carousel {
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.games {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.game {
+    text-align: center;
+    width: calc(20% - 20px);
+    margin: 0 10px;
+    opacity: 0;
+    transform: translateY(-50px); /* Начальное положение по оси Y */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    padding: 20px; /* Добавляем внутренние отступы */
+    border-radius: 10px; /* Закругляем углы */
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8)); /* Плавный переход от прозрачного к непрозрачному */
+
+}
+.game img {
+    max-width: 100px; /* Максимальная ширина 100 пикселей */
+    max-height: 100px; /* Максимальная высота 100 пикселей */
+    width: auto; /* Автоматическая ширина */
+    height: auto; /* Автоматическая высота */
+    border-radius: 5px; /* Устанавливаем радиус закругления углов */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+}
+
+.game h3 {
+    margin-bottom: 10px;
+    color: #fff; /* Цвет текста */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8); /* Обводка текста */
+}
+
+.game.animate-from-top.visible {
+    opacity: 1;
+    transform: translateY(0); /* Появление сверху вниз */
+}
+
+.game.animate-from-left.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.game .description {
+    opacity: 0;
+    transform: translateY(-50px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.game.animate-from-top.visible .description {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.game.animate-from-bottom.visible .description {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.game img {
+    width: 100%;
+    border-radius: 5px; /* Устанавливаем радиус закругления изображения игры */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#what-sets-us-apart {
+    padding: 250px 0;
+    background-image: url('background3.jpg'); /* Путь к вашему фоновому изображению */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; /* Фиксируем фоновое изображение */
+    color: #fff;
+    text-align: center;
+}
+
+#our-games h2 {
+    margin-bottom: 20px; /* Уменьшаем отступ снизу */
+    font-size: 3em; /* Увеличиваем размер шрифта заголовка */
+}
+
+.separator {
+    width: 50px;
+    height: 2px;
+    background-color: #fff;
+    margin: 30px auto; /* Увеличенные отступы от верха и низа */
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+}
+
+
+#what-sets-us-apart {
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+}
+
+.feature {
+    text-align: left;
+    max-width: 300px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
+}
+
+.feature h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 1.2em;
+}
+
+#contact {
+    padding: 30px 0;
+    height: auto;
+    background-color: #926200;
+    color: #fff;
+    display: flex;
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+    text-align: center; /* Центрируем текст внутри .social-links */
+}
+
+.social-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.social-links a i {
+    margin-right: 5px;
+}
+
+footer {
+    background-color: #616161; /* Серый фон для футера */
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+#copyright {
+    background-color: #616161; /* Серый фон */
+    color: #fff; /* Белый текст */
+    text-align: center; /* Центрируем текст по горизонтали */
+    padding: 20px 0; /* Внутренние отступы */
+}
+
+#copyright p {
+    margin: 0; /* Убираем отступы вокруг текста */
+}
+
+
+
+/* Анимации */
+
+.animate-from-top {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-from-bottom {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.unusual-tab {
+    background-color: #939393;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.unusual-tab h2 {
+    margin-bottom: 30px;
+    font-size: 3em;
+}
+
+
+/* Добавляем анимацию для features */
+.feature {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.feature.animate-from-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
