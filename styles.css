@@ -351,6 +351,26 @@ footer p {
     font-size: 3em;
 }
 
+.gallery-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* Для плавности на iOS */
+}
+
+.gallery-item {
+    flex: 0 0 20%; /* Установите ширину каждого элемента карусели (20% от контейнера) */
+    margin-right: 10px; /* Пространство между изображениями */
+    scroll-snap-align: start;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Чтобы изображения заполняли всю доступную область */
+}
+
+
 
 /* Добавляем анимацию для features */
 .feature {

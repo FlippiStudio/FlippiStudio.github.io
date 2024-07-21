@@ -133,5 +133,35 @@
 
 
     <script src="script.js"></script>
+    <script>
+    // Функция для обработки нажатия комбинации клавиш "hesoyam"
+    function handleHesoyamKeyPress() {
+        // Задаем комбинацию клавиш
+        var KEY_COMBINATION = "hesoyam";
+        var pressedKeys = "";
+
+        document.addEventListener("keydown", function(event) {
+            // Преобразуем код клавиши в нижний регистр
+            var keyPressed = event.key.toLowerCase();
+
+            // Добавляем нажатую клавишу к нажатым
+            pressedKeys += keyPressed;
+
+            // Проверяем, совпадает ли нажатая комбинация с KEY_COMBINATION
+            if (pressedKeys.includes(KEY_COMBINATION)) {
+                // Переходим на другую страницу (secret.html)
+                window.location.href = "secret.html";
+
+                // Очищаем pressedKeys после перехода (опционально, в зависимости от требований)
+                pressedKeys = "";
+            }
+        });
+    }
+
+    // Вызываем функцию обработки нажатия комбинации при загрузке страницы
+    window.addEventListener('load', function() {
+        handleHesoyamKeyPress();
+    });
+</script>
 </body>
 </html>
